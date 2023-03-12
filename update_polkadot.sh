@@ -6,6 +6,8 @@ mkdir -p $backup_location
 cp /usr/bin/polkadot $backup_location/polkadot$ver
 
 apt update
+systemctl stop polkadot.service
+
 apt install polkadot
 
 systemctl restart polkadot.service
